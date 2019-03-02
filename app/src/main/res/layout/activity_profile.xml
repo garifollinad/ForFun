@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dinaragarifollina.profile.Profile">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile"
+        android:layout_marginTop="61dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Алихан Кудабаев" />
+
+    <EditText
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile"
+        android:layout_marginTop="10dp"
+        android:hint="+7 708 445 43 53"
+        android:layout_below="@id/tv1"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile"
+        android:layout_marginTop="10dp"
+        android:text="Баланс:"
+        android:layout_below="@id/tv2" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="500 тг"
+        android:textColor="#000000"
+        android:layout_below="@id/tv2"
+        android:layout_toRightOf="@id/tv3"  />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile"
+        android:layout_marginTop="10dp"
+        android:text="Вывод баланса"
+        android:textColor="#000000"
+        android:layout_below="@id/tv3" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile"
+        android:layout_marginTop="10dp"
+        android:text="Выйти"
+        android:textColor="#000000"
+        android:layout_below="@id/tv5" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/profile_icon"
+        android:textColor="#000000"/>
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/edit"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/tv2"/>
+    <ImageView
+        android:id="@+id/money_transfer"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="185dp"
+        android:src="@drawable/money_transfer"
+        android:textColor="#000000"
+        android:layout_toLeftOf="@id/tv5"/>
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="214dp"
+        android:src="@drawable/exit"
+        android:textColor="#000000"
+        android:layout_toLeftOf="@id/tv6"/>
+
+</RelativeLayout>
