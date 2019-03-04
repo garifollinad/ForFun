@@ -35,13 +35,16 @@
         <activity
             android:name=".PerevodMob"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SMS"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SMS"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Cashback" />
         <activity android:name=".Scan" />
         <activity android:name=".Profile" />
-        <activity android:name=".InputCheck"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".InputCheck"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PerevodQiwi"></activity>
     </application>
 
 </manifest>

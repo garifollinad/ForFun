@@ -51,7 +51,8 @@ class Profile : androidx.fragment.app.Fragment() {
                    alert.setMessage("Деньги начислятся в течение 5 минут" +"\n")
                    alert.show()
                }
-
+        var balance = Balance()
+        tv4.setText(balance.balance)
         tv5.setOnClickListener(){
             val intentMob = Intent(activity!!.baseContext, BalanceMobile::class.java)
             startActivity(intentMob) }

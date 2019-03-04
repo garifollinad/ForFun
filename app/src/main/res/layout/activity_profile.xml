@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#000000"
+        android:text=""
         android:layout_below="@id/tv2"
         android:layout_toRightOf="@id/tv3"  />
 
