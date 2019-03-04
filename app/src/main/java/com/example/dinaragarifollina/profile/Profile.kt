@@ -12,12 +12,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import android.content.DialogInterface
+import android.widget.Button
+import android.widget.ImageView
+import androidx.appcompat.widget.ActionBarContainer
+import androidx.appcompat.widget.Toolbar
+import com.example.dinaragarifollina.profile.R.drawable.ok
+import com.example.dinaragarifollina.profile.R.id.*
+import kotlinx.android.synthetic.main.activity_profile.*
+
 
 class Profile : androidx.fragment.app.Fragment() {
     var myStr = 0
     val LOG_TAG = "myLogs"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -25,26 +34,30 @@ class Profile : androidx.fragment.app.Fragment() {
 
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.activity_profile, container, false)
-
         //INITIALIZE VIEWS
-        var tv5 = rootView.findViewById(R.id.tv5) as TextView
+
+        var tv5 = rootView.findViewById(R.id.tv5) as Button
+        var tv6 = rootView.findViewById(R.id.tv6) as Button
         val myStr = arguments?.getString(SMS.DIALOG_KEY)
                if(myStr== STATUS_DIALOG){
                    var alert:AlertDialog.Builder=AlertDialog.Builder(getActivity())
-                   alert.setMessage("Перевод произведен успешно" +"\n"+
-                           "Деньги начислятся в течение 5 минут")
-                   alert.setNeutralButton("OK",object : DialogInterface.OnClickListener{
-                       override fun onClick(dialog: DialogInterface?, which: Int) {
-                           Toast.makeText(getContext(), "Good", Toast.LENGTH_SHORT).show()
-                       }
-                   })
+                   val imageView = rootView.findViewById(R.id.alert) as? ImageView
+                   imageView!!.setImageResource(R.drawable.ok)
+                   if (imageView.getParent() != null)
+                       (imageView.getParent() as ViewGroup).removeView(imageView) // <- fix
+                   alert.setView(imageView)
+                   alert.setPositiveButton("Ok", null)
+                   alert.setTitle("      Перевод произведен успешно")
+                   alert.setMessage("Деньги начислятся в течение 5 минут" +"\n")
                    alert.show()
                }
 
-        tv5!!.setOnClickListener{
+        tv5.setOnClickListener(){
             val intentMob = Intent(activity!!.baseContext, BalanceMobile::class.java)
             startActivity(intentMob) }
 
+        tv6.setOnClickListener(){
+            getActivity()!!.finish(); }
         return rootView
     }
 

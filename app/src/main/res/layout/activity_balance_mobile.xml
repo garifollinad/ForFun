@@ -6,41 +6,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BalanceMobile">
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/green">
+    </androidx.appcompat.widget.Toolbar>
+    <Button
         android:id="@+id/tvMob"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="На баланс телефона"
-        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="    На баланс телефона"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/phone"
+        android:drawableRight="@drawable/right_arr"
+        android:backgroundTint="@android:color/white"
+        android:textAllCaps="false"
         android:textColor="#000000" />
-    <TextView
+    <Button
         android:id="@+id/tvQiwi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
-        android:text="На Qiwi кошелек"
+        android:text="      На Qiwi кошелек"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/qiwi"
+        android:drawableRight="@drawable/right_arr"
+        android:backgroundTint="@android:color/white"
+        android:textAllCaps="false"
         android:textColor="#000000"
         android:layout_below="@id/tvMob" />
-
-    <ImageView
-        android:id="@+id/phone"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignEnd="@+id/qiwi"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="8dp"
-        android:src="@drawable/phone"
-        android:textColor="#000000" />
-
-    <ImageView
-        android:id="@+id/qiwi"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="33dp"
-        android:src="@drawable/qiwi"
-        android:textColor="#000000" />
 
 </RelativeLayout>

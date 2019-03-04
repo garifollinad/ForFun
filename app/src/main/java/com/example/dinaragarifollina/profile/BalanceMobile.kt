@@ -3,21 +3,23 @@ package com.example.dinaragarifollina.profile
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
+import kotlinx.android.synthetic.main.activity_balance_mobile.*
 
 class BalanceMobile : AppCompatActivity() {
-    private var tvMob: TextView?=null;
-    private var tvQiwi: TextView?=null;
-
+    var mActionBarToolbar: Toolbar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_balance_mobile)
-        tvMob = findViewById<View>(R.id.tvMob) as TextView
-        tvMob!!.setOnClickListener {
+        mActionBarToolbar = findViewById(R.id.toolbar_actionbar)
+        setSupportActionBar(mActionBarToolbar)
+        getSupportActionBar()!!.setTitle(Html.fromHtml("<font color='#FFFFFF'>" + "Профиль" + "</font>"))
+        tvMob.setOnClickListener {
             val intentMob = Intent(this, PerevodMob::class.java)
             startActivity(intentMob)
-
         }
     }
 }

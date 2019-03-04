@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.action_item1 -> selectedFragment = Cashback.newInstance()
                 R.id.action_item2 -> selectedFragment = Scan.newInstance()
-                R.id.action_item3 -> selectedFragment = Profile.newInstance()
+                R.id.action_item3 -> selectedFragment = Scan.newInstance()
+                R.id.action_item4 -> selectedFragment = Profile.newInstance()
             }
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.frame_layout, selectedFragment!!)
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
         val transaction = supportFragmentManager.beginTransaction()
         val profileFragent = Profile.newInstance()
+
         if(intent.getStringExtra(SMS.DIALOG_KEY) == Profile.STATUS_DIALOG){
             val bundle = Bundle()
             bundle.putString(SMS.DIALOG_KEY, Profile.STATUS_DIALOG)

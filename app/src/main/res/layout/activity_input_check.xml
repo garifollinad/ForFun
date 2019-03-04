@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerevodMob">
+    tools:context=".InputCheck">
     <androidx.appcompat.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:local="http://schemas.android.com/apk/res-auto"
@@ -16,47 +16,56 @@
         android:layout_alignParentTop="true"
         android:background="@color/green">
     </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:id="@+id/tv11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:text=" Ваш баланс: "
-        android:textColor="@color/colorGrey" />
-    <TextView
-        android:id="@+id/tv4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:text=" 500 тг"
-        android:textColor="#000000"
-        android:layout_toRightOf="@id/tv11"  />
     <EditText
         android:id="@+id/tv22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:inputType="phone"
-        android:hint="Введите номер телефона получателя"
-        android:layout_below="@id/tv11"/>
+        android:layout_marginTop="55dp"
+        android:hint="Номер чека"
+        android:inputType="number"
+        />
     <EditText
         android:id="@+id/tv33"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:inputType="number"
-        android:hint="Сумма перевода"
+        android:hint="Адрес"
+        android:inputType="text"
         android:layout_below="@id/tv22"/>
+    <EditText
+        android:id="@+id/tv44"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Адрес"
+        android:inputType="text"
+        android:layout_below="@id/tv33"/>
+    <EditText
+        android:id="@+id/tv55"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Цена"
+        android:inputType="number"
+        android:layout_below="@id/tv44"/>
+    <EditText
+        android:id="@+id/tv66"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Дата"
+        android:inputType="datetime"
+        android:layout_below="@id/tv55"/>
     <Button
         android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Перевести"
+        android:text="Подтвердить"
         android:enabled="false"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_below="@id/tv33"
+        android:layout_below="@id/tv66"
         android:background="@color/green"
         />
 

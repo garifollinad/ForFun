@@ -2,6 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dinaragarifollina.profile">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,12 +29,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BalanceMobile" />
-        <activity android:name=".PerevodMob" />
-        <activity android:name=".SMS" />
+        <activity
+            android:name=".BalanceMobile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PerevodMob"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SMS"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Cashback" />
         <activity android:name=".Scan" />
         <activity android:name=".Profile" />
+        <activity android:name=".InputCheck"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 
 </manifest>

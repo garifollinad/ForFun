@@ -18,7 +18,6 @@ class Cashback : androidx.fragment.app.Fragment() {
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.activity_cashback, container, false)
     }
-    jii
     companion object {
         fun newInstance(): Cashback {
             return Cashback()
